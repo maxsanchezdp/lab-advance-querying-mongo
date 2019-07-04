@@ -62,11 +62,8 @@ limit: 1000
 
 ### 12. All the companies that have been 'deadpooled' after the third year.
 
-query: /You should copy/paste the query in here/
-projection: /You should copy/paste the projection in here/
-sort: /You should copy/paste the sort in here/
-skip: /You should copy/paste the skip in here/
-limit: /You should copy/paste the limit in here/
+query: { $where: "(this.deadpooled_year > this.founded_year+3) && (this.deadpooled_year >3) && (this.founded_year!= null) && (this.deadpooled_year!= null)"  }
+
 
 ### 13. All the companies founded before 2000 that have and acquisition amount of more than 10.000.000
 
